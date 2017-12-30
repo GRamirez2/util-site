@@ -44,19 +44,4 @@ html(lang="en")
               section(class = `${slug}`)
                 != body
 
-    footer.container.colophon
-      .wrap
-        .grid
-          .col-12-12
-            h3 Colophon
-
-            p Fonts used on this page:
-              br
-              | Headings:
-              a(href="https://fonts.google.com/specimen/Fjalla+One") Fjalla One
-              br
-              | Body copy:
-              a(href="https://fonts.google.com/specimen/Comfortaa") Comfortaa
-              br
-              | Hand-written HTML & CSS
-    script(src="/js/app.js")
+    include ../_partials/footer

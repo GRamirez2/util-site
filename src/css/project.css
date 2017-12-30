@@ -30,6 +30,7 @@ a {
 .site-nav {
   background: #fff;
   font-family: 'Comfortaa', cursive;
+  font-size: .8rem;
   left: 0;
   height: 0;
   right: 0;
@@ -38,19 +39,17 @@ a {
   z-index: 10;
 }
 .site-nav ul {
-  margin-top: -100%;
-  overflow: scroll;
+  margin-top: -200%;
   transition: margin-top .4s ease-in-out;
 }
-
 .site-nav.is-active {
   height: 100%;
+  overflow-y: scroll;
   top: 0;
 }
 .site-nav.is-active ul {
   margin-top: 0;
 }
-
 .site-nav a {
   transition: color .3s ease-in-out;
 }
@@ -60,6 +59,7 @@ a {
 @media (min-width: 767px) {
   .site-nav {
     height: 100%;
+    font-size: 1rem;
   }
   .site-nav a:after {
     background-color: var(--blue);
@@ -155,8 +155,8 @@ blockquote > p {
 
 
 
-
-
-.colophon p {
-  color: var(--midGrey);
+.cc {
+  border: 1px solid #ccc;
+  border-radius: 100%;
+  padding: 10px;
 }
