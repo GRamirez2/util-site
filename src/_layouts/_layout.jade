@@ -1,0 +1,31 @@
+doctype
+html
+  head
+    title #{ siteTitle }
+    link(rel="stylesheet" href="/css/less-styles.css")
+    link(rel="stylesheet" href="/css/sass-styles.css")
+    link(rel="stylesheet" href="/css/stylus-styles.css")
+    link(rel="stylesheet" href="/css/css-styles.css")
+  body
+    .from-less-file
+      h1 #{ title }
+
+    .from-sass-file
+      h4 Pages
+      ul
+        for page, slug in public._data
+          li: a(href="/#{ slug }")= page.navText
+
+    .from-css-file
+      h4 Posts
+      ul
+        - var keys = Object.keys(public.posts._data);
+        - for(var i=0; i<Math.min(10,keys.length); i++) {
+          li
+            a(href="/posts/#{ keys[i] }") #{ public.posts._data[keys[i]].title }
+        - }
+      .container
+        != body
+
+    footer.from-stylus-file
+      p The site Footer

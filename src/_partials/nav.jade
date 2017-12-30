@@ -1,0 +1,11 @@
+.float-right.none-m.fixed.trigger
+  .spin.medium.hamburger.hamburger--spin
+    .hamburger-box
+      .hamburger-inner
+
+nav.col-2-12.fixed.p-40.p-0-m.relative-m.site-nav
+  ul.list-unstyled.uppercase.text-center.text-left-m
+    li.mb-15.mb-40-m: a(href="/") Intro
+    for page, slug in public.docs._data
+      if (slug !== '404' && slug !== 'index')
+        li.mb-15.mb-40-m: a(href="/docs/#{ slug }")= page.navText

@@ -1,0 +1,162 @@
+@import './vars.css';
+@import './hamburger.css';
+
+body {
+  color: var(--dark);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 32px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+::-moz-selection { background: yellow; }
+::selection { background: yellow; }
+
+.logo-mark,
+.word-mark {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-nav {
+  background: #fff;
+  font-family: 'Comfortaa', cursive;
+  left: 0;
+  height: 0;
+  right: 0;
+  top: -50%;
+  transition: height .4s ease-in-out, top .4s ease-in-out;
+  z-index: 10;
+}
+.site-nav ul {
+  margin-top: -100%;
+  overflow: scroll;
+  transition: margin-top .4s ease-in-out;
+}
+
+.site-nav.is-active {
+  height: 100%;
+  top: 0;
+}
+.site-nav.is-active ul {
+  margin-top: 0;
+}
+
+.site-nav a {
+  transition: color .3s ease-in-out;
+}
+.site-nav a:hover {
+  color: var(--gold);
+}
+@media (min-width: 767px) {
+  .site-nav {
+    height: 100%;
+  }
+  .site-nav a:after {
+    background-color: var(--blue);
+    content: '';
+    display: block;
+    height: 2px;
+    transition: width .3s ease-in-out;
+    width: 0%;
+  }
+  .site-nav a:hover:after {
+    background-color: var(--gold);
+    content: '';
+    display: block;
+    height: 2px;
+    width: 50%;
+  }
+  .site-nav ul {
+    margin-top: 0;
+  }
+}
+.site-nav a.active {
+  color: var(--gold);
+}
+
+
+
+
+
+h2 {
+  display: inline-block;
+  text-transform: uppercase;
+}
+h2:after {
+  background-color: var(--lightGrey);
+  content: '';
+  display: block;
+  height: 7px;
+  width: 30%;
+}
+
+
+
+textarea {
+  background-color: var(--lightGrey);
+  font-family: monospace;
+  font-size: .8rem;
+  min-height: 200px;
+  width: 100%;
+}
+
+blockquote > p {
+  border-bottom: 1px solid var(--lightGrey);
+  border-top: 1px solid var(--lightGrey);
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+
+
+
+
+
+
+/* BACKGROUNDS */
+#backgrounds-1,
+#backgrounds-2,
+#backgrounds-3,
+#backgrounds-4,
+#backgrounds-5 {
+  background-image: url('/img/post1.jpg');
+  color: var(--white);
+  height: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.colophon p {
+  color: var(--midGrey);
+}
