@@ -19,5 +19,34 @@ Since then, I have been borrowing/stealing pieces of code and conventions from a
 I've made a few decisions that I think are important to keep in mind:
 1. No CSS pre/post processors (more on this later)
 2. No prefixes. These can be added a variety of ways in your build process.
-3. No JavasScript. Any JavaScript fanciness is up to you.
+3. No JavasScript. All your JavaScript fanciness is up to you.
+
+And on to the good parts...
+
+### Mobile First
+
+All classes use the same mobile-first approach. This means that any class without a modifier will be applied to all screens starting from mobile, or small, screens all the way up to large screens.
+
+For example, to hide or use `display: none` on all screens, you can add a `none` class like so:
+
+```
+<div class="none">This will not display on any screen</div>
+```
+
+However, if you would only like to hide it on medium to large screens, you can do the following:
+
+```
+<div class="none-m">This will not display on medium to large screens</div>
+```
+
+You can also reverse the display character if by adding a `block`, `inline-block` or `inline` class. If, for instance, you want to hide a div on mobile screens, you can do the following:
+
+```
+<div class="none block-m">This will not display on any mobile screens</div>
+```
+
+All classes will have the `-m` or `-l` modifiers available.
+
+
+
 

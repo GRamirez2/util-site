@@ -1,7 +1,7 @@
 ---
-slug: image
-title: image
-navText: image
+slug: images
+title: images
+navText: images
 layout: _layout
 ---
-## Proin auctor orci eros
+## Images
